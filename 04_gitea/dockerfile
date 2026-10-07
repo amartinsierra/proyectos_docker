@@ -1,0 +1,4 @@
+FROM gitea/gitea:latest
+
+ENV GITEA__server__HTTP_PORT=3000
+ENV GITEA__server__ROOT_URL=http://localhost:3000/
