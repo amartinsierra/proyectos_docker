@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+    libros:
+        build: ./libros
+        ports:
+            - 8500:8500
+        env_file: variables.env
+        
+    ejemplares:
+        build: ./ejemplares
+        ports:
+            - 9000:9000
+        env_file: variables.env
+        depends_on:
+            - libros
