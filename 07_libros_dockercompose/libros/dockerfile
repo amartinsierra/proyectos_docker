@@ -1,0 +1,3 @@
+FROM eclipse-temurin:21-jre
+COPY crud_libros.jar crud_libros.jar
+ENTRYPOINT java -jar crud_libros.jar
