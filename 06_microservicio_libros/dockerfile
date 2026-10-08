@@ -1,0 +1,8 @@
+FROM eclipse-temurin:21-jre
+COPY crud_libros.jar crud_libros.jar
+#ENV SERVER_DB=192.168.1.18
+ENV PORT_DB=3308
+ENV USER_DB=root
+#puerto externo que se ejecuta
+EXPOSE 8500
+ENTRYPOINT ["java","-jar","crud_libros.jar"]
